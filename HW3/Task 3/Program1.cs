@@ -8,14 +8,12 @@ namespace ConsoleApp2
         {
             Console.Write("Enter A: ");
             int A = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter n: ");
-            int n = Convert.ToInt32(Console.ReadLine());
             int amount = 0;
 
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i < A; i++)
             {
                 int sqr = i * i;
-                if (i > 0 && i % 2 == 0 && sqr < A)
+                if (sqr < A)
                 {
                     amount++;
                 }
