@@ -8,11 +8,9 @@ namespace ConsoleApp3
         {
             Console.Write("Enter A: ");
             int A = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter n: ");
-            int n = Convert.ToInt32(Console.ReadLine());
             int maxDivider = 0;
 
-            for (int i=1; i<n; i++)
+            for (int i=1; i<A; i++)
             {
                 if (A % i == 0 && i!=A)
                 {
