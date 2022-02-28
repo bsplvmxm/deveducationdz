@@ -14,7 +14,7 @@ namespace ConsoleApp8
             while (number != 0)
             {
                 decade = number % 10;
-                if (number % 2 != 0)
+                if (decade % 2 != 0)
                 {
                     amount++;
                 }
