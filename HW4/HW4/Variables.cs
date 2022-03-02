@@ -14,9 +14,9 @@ namespace HW4
             return result;
         }
         
-        public static int GetSolutionOfLinearEquation(int A, int B, int C)
+        public static double GetSolutionOfLinearEquation(int A, double B, int C)
         {
-            int result = (C - B) / A;
+            double result = (C - B) / A;
             return result;
         }
 
