@@ -18,5 +18,22 @@ namespace HW4
             }
             return number;
         }
+
+        public static int GetAmountOfPositiveNumbers(int A)
+        {
+            int amount = 0;
+            
+            for (int i = 1; i < A; i++)
+            {
+                int sqr = i * i;
+                if (sqr < A)
+                {
+                    amount++;
+                }
+            }
+
+            return amount;
+        }
     }
+
 }
