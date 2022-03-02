@@ -34,6 +34,25 @@ namespace HW4
 
             return amount;
         }
+
+        public static int PrintTheLargestDivisor(int A)
+        {
+            int maxDivider = 0;
+
+            for (int i = 1; i < A; i++)
+            {
+                if (A % i == 0 && i != A)
+                {
+                    if (i > maxDivider)
+                    {
+                        maxDivider = i;
+                        i++;
+                    }
+                }
+            }
+
+            return maxDivider;
+        }
     }
 
 }
