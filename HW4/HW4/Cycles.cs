@@ -92,6 +92,26 @@ namespace HW4
 
             return fibonacci;
         }
+
+        public static int GetLargestDivisorByEuclidean(int A, int B)
+        {
+            int nod;
+
+            while (A != 0 && B != 0)
+            {
+                if (A > B)
+                {
+                    A = A % B;
+                }
+                else
+                {
+                    B = B % A;
+                }
+            }
+            nod = A + B;
+
+            return nod;
+        }
     }
 
 }
