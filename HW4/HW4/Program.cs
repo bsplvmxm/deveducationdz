@@ -6,7 +6,7 @@ namespace HW4
     {
         static void Main(string[] args)
         {
-            int res = Variables.GetSolutionOfFormula(5, 3);
+            int res = Variables.GetSolutionOfLinearEquation(2, 5, 3);
             Console.WriteLine(res);
         }
     }

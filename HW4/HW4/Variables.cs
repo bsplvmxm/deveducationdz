@@ -13,5 +13,11 @@ namespace HW4
             int result = ((5 * A) + (B * B)) / (B - A);
             return result;
         }
+        
+        public static int GetSolutionOfLinearEquation(int A, int B, int C)
+        {
+            int result = (C - B) / A;
+            return result;
+        }
     }
 }
