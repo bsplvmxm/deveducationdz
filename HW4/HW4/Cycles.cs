@@ -74,6 +74,24 @@ namespace HW4
             }
             return summ;
         }
+
+        public static int GetFibonacciNumber(int N)
+        {
+            int first = 1;
+            int second = 1;
+            int fibonacci = 0;
+            int i = 2;
+
+            while (i < N)
+            {
+                fibonacci = first + second;
+                first = second;
+                second = fibonacci;
+                i++;
+            }
+
+            return fibonacci;
+        }
     }
 
 }
