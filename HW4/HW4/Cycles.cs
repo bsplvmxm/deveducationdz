@@ -152,6 +152,22 @@ namespace HW4
 
             return amount;
         }
+
+        public static int FindMirroredNumber(int number)
+        {
+            int decade;
+            int tmp = 0;
+
+            while (number != 0)
+            {
+                decade = number % 10;
+                tmp *= 10;
+                tmp += decade;
+                number /= 10;
+            }
+
+            return tmp;
+        }
     }
 
 }
