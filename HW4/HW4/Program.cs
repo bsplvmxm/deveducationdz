@@ -6,7 +6,8 @@ namespace HW4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int res = Variables.GetSolutionOfFormula(5, 3);
+            Console.WriteLine(res);
         }
     }
 }

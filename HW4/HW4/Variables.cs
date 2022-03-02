@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace HW4
 {
-    class Variables
+    static class Variables
     {
+        public static int GetSolutionOfFormula(int A, int B)
+        {
+            int result = ((5 * A) + (B * B)) / (B - A);
+            return result;
+        }
     }
 }
