@@ -112,6 +112,28 @@ namespace HW4
 
             return nod;
         }
+
+        public static int FindNumberByHalfDivisionMethod(int N)
+        {
+            int a = 0;
+            int b = N;
+            int half = 0;
+
+            while (half*half*half != N)
+            {
+                half = (a + b) / 2;
+                if (half*half*half < N)
+                {
+                    a = half;
+                }
+                else
+                {
+                    b = half;
+                }
+            }
+
+            return half;
+        }
     }
 
 }
