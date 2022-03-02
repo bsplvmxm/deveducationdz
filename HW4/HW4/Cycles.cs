@@ -135,7 +135,7 @@ namespace HW4
             return half;
         }
 
-        public static int GetAmountDigitsOfNumber(int number)
+        public static int GetAmountOddDigitsOfNumber(int number)
         {
             int decade;
             int amount = 0;
