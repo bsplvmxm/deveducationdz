@@ -134,6 +134,24 @@ namespace HW4
 
             return half;
         }
+
+        public static int GetAmountDigitsOfNumber(int number)
+        {
+            int decade;
+            int amount = 0;
+
+            while (number != 0)
+            {
+                decade = number % 10;
+                if (decade % 2 != 0)
+                {
+                    amount++;
+                }
+                number /= 10;
+            }
+
+            return amount;
+        }
     }
 
 }
