@@ -53,6 +53,27 @@ namespace HW4
 
             return maxDivider;
         }
+
+        public static int GetSummOfNumbersFromRange(int A, int B)
+        {
+            int summ = 0;
+            int tmp;
+
+            if (A>B)
+            {
+                tmp = A;
+                A = B;
+                B = tmp;
+            }
+            for (int i = A; i < B; i++)
+            {
+                if (i % 7 == 0)
+                {
+                    summ += i;
+                }
+            }
+            return summ;
+        }
     }
 
 }
