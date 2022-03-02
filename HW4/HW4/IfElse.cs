@@ -27,5 +27,29 @@ namespace HW4
 
             return result;
         }
+
+        public static string GetNumberOfQuarter(int X, int Y)
+        {
+            string result = "";
+
+            if (X > 0 && Y > 0)
+            {
+                result = "The First Quarter";
+            }
+            else if (X < 0 && Y > 0)
+            {
+                result = "The Second Quarter";
+            }
+            else if (X < 0 && Y < 0)
+            {
+                result = "The Third Quarter";
+            }
+            else if (X > 0 && Y < 0)
+            {
+                result = "The Fourth Quarter";
+            }
+
+            return result;
+        }
     }
 }
