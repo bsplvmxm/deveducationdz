@@ -8,5 +8,24 @@ namespace HW4
 {
     class IfElse
     {
+        public static int GetSolutionAfterComparison(int A, int B)
+        {
+            int result = 0;
+
+            if (A > B)
+            {
+                result = A + B;
+            }
+            else if (A == B)
+            {
+                result = A * B;
+            }
+            else if (A < B)
+            {
+                result = A - B;
+            }
+
+            return result;
+        }
     }
 }
