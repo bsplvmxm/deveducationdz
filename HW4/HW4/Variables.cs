@@ -36,7 +36,7 @@ namespace HW4
                 sign = "";
             }
 
-            result = "Y=" + A + "X" + sign + B;
+            result = $"Y={A}X{sign}{B}";
             return result;
         }
     }
