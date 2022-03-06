@@ -178,5 +178,37 @@ namespace HW4
             }
                 return result;
         }
+
+        #region FindSolutionOfQuadraticEquation
+        public static void SolutionTheQuadraticEquation(int A, int B, int C, out string res)
+        {
+            double discriminant = FindDiscriminantOfQuadraticEquation(A, B, C);
+            res = FindTheRootsOfQuadraticEquation(A, B, discriminant);
+        }
+
+        public static int FindDiscriminantOfQuadraticEquation(int A, int B, int C)
+        {
+            return (B * B) - (4 * A * C);
+        }
+
+        public static string FindTheRootsOfQuadraticEquation(int A, int B, double discriminant)
+        {
+            if (discriminant > 0)
+            {
+                double X1 = ((double)(-B) + (Math.Sqrt(discriminant))) / (2 * A);
+                double X2 = ((double)(-B) - (Math.Sqrt(discriminant))) / (2 * A);
+                return $"Answer: X1={X1}; X2={X2}";
+            }
+            else if (discriminant == 0)
+            {
+                double X = ((double)(-B) / (2 * A));
+                return $"Answer: We've one root: {X}";
+            }
+            else
+            {
+                return "Answer: No roots. No solutions.";
+            }
+        }
+        #endregion
     }
 }
