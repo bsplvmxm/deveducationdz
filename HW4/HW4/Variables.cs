@@ -39,5 +39,11 @@ namespace HW4
             result = $"Y={A}X{sign}{B}";
             return result;
         }
+
+        public static void OutputDivisionAndDivisionRemainder(int A, int B, out int res1, out int res2)
+        {
+            res1 = A / B;
+            res2 = A % B;
+        }
     }
 }
