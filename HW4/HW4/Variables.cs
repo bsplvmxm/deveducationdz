@@ -45,5 +45,11 @@ namespace HW4
             res1 = A / B;
             res2 = A % B;
         }
+
+        public static void SwapContent(string A, string B, out string copyA, out string copyB)
+        {
+            copyA = B;
+            copyB = A;
+        }
     }
 }
