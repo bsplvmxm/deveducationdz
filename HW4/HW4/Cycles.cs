@@ -189,12 +189,7 @@ namespace HW4
             return check;
         }
 
-        public static int EnteringNumbers(string mess)
-        {
-            Console.Write(mess);
-            int num = Convert.ToInt32(Console.ReadLine());
-            return num;
-        }
+        
     }
 
 }
