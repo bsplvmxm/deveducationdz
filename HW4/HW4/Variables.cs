@@ -10,6 +10,11 @@ namespace HW4
     {
         public static int GetSolutionOfFormula(int A, int B)
         {
+            if (B==A)
+            {
+                throw new Exception("B mustn't be A");
+            }
+
             int result = ((5 * A) + (B * B)) / (B - A);
             return result;
         }
