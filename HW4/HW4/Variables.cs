@@ -57,6 +57,11 @@ namespace HW4
 
         public static void OutputDivisionAndDivisionRemainder(int A, int B, out int res1, out int res2)
         {
+            if (B==0)
+            {
+                throw new Exception("B mustn't be 0");
+            }
+
             res1 = A / B;
             res2 = A % B;
         }
