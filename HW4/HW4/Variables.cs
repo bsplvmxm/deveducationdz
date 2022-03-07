@@ -12,7 +12,7 @@ namespace HW4
         {
             if (B==A)
             {
-                throw new Exception("B mustn't be A");
+                throw new Exception("B mustn't be equal A");
             }
 
             int result = ((5 * A) + (B * B)) / (B - A);
@@ -32,6 +32,11 @@ namespace HW4
 
         public static string GetEquationOfStraightLine(int X1, int X2, int Y1, int Y2)
         {
+            if (X1==X2)
+            {
+                throw new Exception("X1 mustn't be equal X2");
+            }
+
             int A = (Y2 - Y1) / (X2 - X1);
             int B = Y2 - (A * X2);
             string sign;
