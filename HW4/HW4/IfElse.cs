@@ -210,12 +210,7 @@ namespace HW4
             }
         }
         #endregion
-        public static int EnteringNumbers(string mess)
-        {
-            Console.Write(mess);
-            int num = Convert.ToInt32(Console.ReadLine());
-            return num;
-        }
+       
 
         #region OutputNumbersInAscendingOrder
         
