@@ -21,6 +21,11 @@ namespace HW4
         
         public static double GetSolutionOfLinearEquation(int A, double B, int C)
         {
+            if (A==0)
+            {
+                throw new Exception("A mustn't be 0");
+            }
+
             double result = (C - B) / A;
             return result;
         }
