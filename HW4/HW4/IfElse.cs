@@ -218,51 +218,7 @@ namespace HW4
         }
 
         #region OutputNumbersInAscendingOrder
-        public static void OutputNumbersInAscendingOrder()
-        {
-            int A = EnteringNumbers("Enter A: ");
-            int B = EnteringNumbers("Enter B: ");
-            int C = EnteringNumbers("Enter C: ");
-            int[] numbers = ComparingNumbersInAscending(A, B, C);
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                Console.Write(numbers[i] + " ");
-            } 
-        }
-
-        public static int[] ComparingNumbersInAscending(int A, int B, int C)
-        {
-            if (A > B && B > C)
-            {
-                int[] arr = { C, B, A };
-                return arr;
-            }
-            else if (A > C && B < C)
-            {
-                int[] arr = { B, C, A };
-                return arr;
-            }
-            else if (A < B && A > C)
-            {
-                int[] arr = { C, A, B };
-                return arr;
-            }
-            else if (B > C && C > A)
-            {
-                int[] arr = { A, C, B };
-                return arr;
-            }
-            else if (B < C && B < A)
-            {
-                int[] arr = { B, A, C };
-                return arr;
-            }
-            else
-            {
-                int[] arr = { A, B, C };
-                return arr;
-            }
-        }
+        
         #endregion
     }
 }
