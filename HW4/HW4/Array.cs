@@ -8,6 +8,7 @@ namespace HW4
 {
     class Array
     {
+        #region Generate and Write Arrays
         public static int[] GenerateArray(int lenght)
         {
             Random r = new Random();
@@ -28,6 +29,7 @@ namespace HW4
                 Console.Write(array[i] + " ");
             }
         }
+        #endregion
         public static void GetSolutionOfMinimumElement() //ex.1
         {
             Console.Write("Enter lenght of array: ");
