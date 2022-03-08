@@ -147,5 +147,31 @@ namespace HW4
             }
             return summ;
         }
+
+        public static void GetSolutionOfCountOddElements() //ex.7
+        {
+            Console.Write("Enter lenght of array: ");
+            int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
+            Console.Write("Your array: ");
+            WriteArray(arr);
+            Console.Write($"\nCount of odd elements: {FindCountOfOddElements(arr)}");
+        }
+
+        public static int FindCountOfOddElements(int[] a)
+        {
+            int count = 0;
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (a[i] % 2 != 0)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+        
+
+        
     }
 }
