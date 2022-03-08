@@ -35,7 +35,6 @@ namespace HW4
             Console.Write("Your array: ");
             WriteArray(arr);
             Console.Write($"Min element: {FindMinimumElementOfArray(arr)}");
-
         }
         public static int FindMinimumElementOfArray(int[] a)
         {
@@ -50,6 +49,30 @@ namespace HW4
                 }
             }
             return min;
+        }
+
+        public static void GetSolutionOfMaximumElement() //ex.2
+        {
+            Console.Write("Enter lenght of array: ");
+            int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
+            Console.Write("Your array: ");
+            WriteArray(arr);
+            Console.Write($"Max element: {FindMaximumElementOfArray(arr)}");
+        }
+
+        public static int FindMaximumElementOfArray(int[] a)
+        {
+            int max = a[0];
+
+            for (int i = 1; i < a.Length; i++)
+            {
+
+                if (a[i] > max)
+                {
+                    max = a[i];
+                }
+            }
+            return max;
         }
     }
 }
