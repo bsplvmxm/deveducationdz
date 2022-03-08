@@ -35,7 +35,7 @@ namespace HW4
             Console.Write("Your array: ");
             WriteArray(arr);
             Console.Write($"Min element: {FindMinimumElementOfArray(arr)}");
-             
+
         }
         public static int FindMinimumElementOfArray(int[] a)
         {
