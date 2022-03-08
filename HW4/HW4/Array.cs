@@ -34,7 +34,7 @@ namespace HW4
             int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
             Console.Write("Your array: ");
             WriteArray(arr);
-            Console.Write($"Min element: {FindMinimumElementOfArray(arr)}");
+            Console.Write($"\nMin element: {FindMinimumElementOfArray(arr)}");
         }
         public static int FindMinimumElementOfArray(int[] a)
         {
@@ -57,7 +57,7 @@ namespace HW4
             int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
             Console.Write("Your array: ");
             WriteArray(arr);
-            Console.Write($"Max element: {FindMaximumElementOfArray(arr)}");
+            Console.Write($"\nMax element: {FindMaximumElementOfArray(arr)}");
         }
 
         public static int FindMaximumElementOfArray(int[] a)
@@ -81,7 +81,7 @@ namespace HW4
             int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
             Console.Write("Your array: ");
             WriteArray(arr);
-            Console.Write($"Index of min element: {FindIndexMinElementOfArray(arr)}");
+            Console.Write($"\nIndex of min element: {FindIndexMinElementOfArray(arr)}");
         }
         public static int FindIndexMinElementOfArray(int[] a)
         {
@@ -106,7 +106,7 @@ namespace HW4
             int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
             Console.Write("Your array: ");
             WriteArray(arr);
-            Console.Write($"Index of min element: {FindIndexMaxElementOfArray(arr)}");
+            Console.Write($"\nIndex of min element: {FindIndexMaxElementOfArray(arr)}");
         }
         public static int FindIndexMaxElementOfArray(int[] a)
         {
@@ -131,7 +131,7 @@ namespace HW4
             int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
             Console.Write("Your array: ");
             WriteArray(arr);
-            Console.Write($"Summ of numbers(odd index): {FindSummNumbersOddIndex(arr)}");
+            Console.Write($"\nSumm of numbers(odd index): {FindSummNumbersOddIndex(arr)}");
         }
 
         public static int FindSummNumbersOddIndex(int[] a)
