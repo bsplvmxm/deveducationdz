@@ -99,5 +99,30 @@ namespace HW4
             }
             return index;
         }
+
+        public static void GetSolutionOfIndexMaxElement() //ex.4
+        {
+            Console.Write("Enter lenght of array: ");
+            int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
+            Console.Write("Your array: ");
+            WriteArray(arr);
+            Console.Write($"Index of min element: {FindIndexMaxElementOfArray(arr)}");
+        }
+        public static int FindIndexMaxElementOfArray(int[] a)
+        {
+            int max = a[0];
+            int index = 0;
+
+            for (int i = 1; i < a.Length; i++)
+            {
+
+                if (a[i] > max)
+                {
+                    max = a[i];
+                    index = i;
+                }
+            }
+            return index;
+        }
     }
 }
