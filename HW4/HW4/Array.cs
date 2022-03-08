@@ -148,6 +148,33 @@ namespace HW4
             return summ;
         }
 
+        public static void GetSolutionOfReverseArray() //ex.6
+        {
+            Console.Write("Enter lenght of array: ");
+            int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
+            Console.Write("Your array: ");
+            WriteArray(arr);
+            Console.Write("\nReversed array: ");
+            ReverseArray(arr);
+            
+        }
+
+        public static void ReverseArray(int[] a)
+        {
+            int[] tmp = new int[a.Length];
+            
+            for (int i = 0; i < a.Length; i++)
+            {
+                tmp[i] += a[a.Length - 1 - i];
+            }
+            
+            for (int i = 0; i < tmp.Length; i++)
+            {
+                Console.Write(tmp[i] + " ");
+            }
+        }
+
+
         public static void GetSolutionOfCountOddElements() //ex.7
         {
             Console.Write("Enter lenght of array: ");
@@ -171,6 +198,7 @@ namespace HW4
             return count;
         }
         
+
 
         
     }
