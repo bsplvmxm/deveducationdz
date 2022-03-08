@@ -124,5 +124,28 @@ namespace HW4
             }
             return index;
         }
+
+        public static void GetSolutionOfSummNumbersOddIndex() //ex.5
+        {
+            Console.Write("Enter lenght of array: ");
+            int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
+            Console.Write("Your array: ");
+            WriteArray(arr);
+            Console.Write($"Summ of numbers(odd index): {FindSummNumbersOddIndex(arr)}");
+        }
+
+        public static int FindSummNumbersOddIndex(int[] a)
+        {
+            int summ = 0;
+
+            for (int i=0; i<a.Length; i++)
+            {
+                if (i%2!=0)
+                {
+                    summ += a[i];
+                }
+            }
+            return summ;
+        }
     }
 }
