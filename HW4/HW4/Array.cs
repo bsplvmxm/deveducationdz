@@ -28,7 +28,7 @@ namespace HW4
                 Console.Write(array[i] + " ");
             }
         }
-        public static void GetSolutionOfMinimumElement()
+        public static void GetSolutionOfMinimumElement() //ex.1
         {
             Console.Write("Enter lenght of array: ");
             int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
