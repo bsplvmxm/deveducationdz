@@ -8,7 +8,7 @@ namespace HW4
 {
     class MyArray
     {
-        #region Generate and Write Arrays
+        #region HelpPrograms
         public static int[] GenerateArray(int lenght)
         {
             Random r = new Random();
@@ -37,6 +37,13 @@ namespace HW4
             Console.Write("Your array: ");
             MyArray.WriteArray(arr);
             Console.Write($"\nAnswer: ");
+        }
+
+        public static int[] CopyArray(int[] array)
+        {
+            int[] tmp = new int[array.Length];
+            Array.Copy(array, tmp, array.Length);
+            return tmp;
         }
         #endregion
         public static int FindMinimumElementOfArray(int[] a) //ex.1
@@ -149,9 +156,8 @@ namespace HW4
         public static void SwapHalfsOfArray(int[] a) //ex.8
         {
             int[] tmp = new int[a.Length];
+            Array.Copy(a, tmp, a.Length);
             
-            
-
             for (int i=0; i<a.Length/2; i++)
             {
 
