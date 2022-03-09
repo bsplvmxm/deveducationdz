@@ -41,9 +41,9 @@ namespace HW4
 
         public static int[] CopyArray(int[] array)
         {
-            int[] tmp = new int[array.Length];
-            Array.Copy(array, tmp, array.Length);
-            return tmp;
+            int[] newArray = new int[array.Length];
+            Array.Copy(array, newArray, array.Length);
+            return newArray;
         }
         #endregion
         public static int FindMinimumElementOfArray(int[] a) //ex.1
@@ -155,9 +155,8 @@ namespace HW4
         
         public static void SwapHalfsOfArray(int[] a) //ex.8
         {
-            int[] tmp = new int[a.Length];
-            Array.Copy(a, tmp, a.Length);
-            
+            int[] tmp = CopyArray(a);
+
             for (int i=0; i<a.Length/2; i++)
             {
 
