@@ -29,16 +29,17 @@ namespace HW4
                 Console.Write(array[i] + " ");
             }
         }
-        #endregion
-        public static void GetSolutionOfMinimumElement() //ex.1
+
+        public static void GetSolution() //help with program.cs
         {
             Console.Write("Enter lenght of array: ");
-            int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
+            int[] arr = Array.GenerateArray(Convert.ToInt32(Console.ReadLine()));
             Console.Write("Your array: ");
-            WriteArray(arr);
-            Console.Write($"\nMin element: {FindMinimumElementOfArray(arr)}");
+            Array.WriteArray(arr);
+            Console.Write($"\nAnswer: ");
         }
-        public static int FindMinimumElementOfArray(int[] a)
+        #endregion
+        public static int FindMinimumElementOfArray(int[] a) //ex.1
         {
             int min = a[0];
 
@@ -53,16 +54,7 @@ namespace HW4
             return min;
         }
 
-        public static void GetSolutionOfMaximumElement() //ex.2
-        {
-            Console.Write("Enter lenght of array: ");
-            int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
-            Console.Write("Your array: ");
-            WriteArray(arr);
-            Console.Write($"\nMax element: {FindMaximumElementOfArray(arr)}");
-        }
-
-        public static int FindMaximumElementOfArray(int[] a)
+        public static int FindMaximumElementOfArray(int[] a) //ex.2
         {
             int max = a[0];
 
@@ -77,15 +69,7 @@ namespace HW4
             return max;
         }
 
-        public static void GetSolutionOfIndexMinElement() //ex.3
-        {
-            Console.Write("Enter lenght of array: ");
-            int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
-            Console.Write("Your array: ");
-            WriteArray(arr);
-            Console.Write($"\nIndex of min element: {FindIndexMinElementOfArray(arr)}");
-        }
-        public static int FindIndexMinElementOfArray(int[] a)
+        public static int FindIndexMinElementOfArray(int[] a) //ex.3
         {
             int min = a[0];
             int index = 0;
@@ -102,15 +86,7 @@ namespace HW4
             return index;
         }
 
-        public static void GetSolutionOfIndexMaxElement() //ex.4
-        {
-            Console.Write("Enter lenght of array: ");
-            int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
-            Console.Write("Your array: ");
-            WriteArray(arr);
-            Console.Write($"\nIndex of min element: {FindIndexMaxElementOfArray(arr)}");
-        }
-        public static int FindIndexMaxElementOfArray(int[] a)
+        public static int FindIndexMaxElementOfArray(int[] a) //ex.4
         {
             int max = a[0];
             int index = 0;
@@ -127,16 +103,7 @@ namespace HW4
             return index;
         }
 
-        public static void GetSolutionOfSummNumbersOddIndex() //ex.5
-        {
-            Console.Write("Enter lenght of array: ");
-            int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
-            Console.Write("Your array: ");
-            WriteArray(arr);
-            Console.Write($"\nSumm of numbers(odd index): {FindSummNumbersOddIndex(arr)}");
-        }
-
-        public static int FindSummNumbersOddIndex(int[] a)
+        public static int FindSummNumbersOddIndex(int[] a) //ex.5
         {
             int summ = 0;
 
@@ -150,18 +117,7 @@ namespace HW4
             return summ;
         }
 
-        public static void GetSolutionOfReverseArray() //ex.6
-        {
-            Console.Write("Enter lenght of array: ");
-            int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
-            Console.Write("Your array: ");
-            WriteArray(arr);
-            Console.Write("\nReversed array: ");
-            ReverseArray(arr);
-            
-        }
-
-        public static void ReverseArray(int[] a)
+        public static void ReverseArray(int[] a) //ex.6
         {
             int[] tmp = new int[a.Length];
             
@@ -176,17 +132,7 @@ namespace HW4
             }
         }
 
-
-        public static void GetSolutionOfCountOddElements() //ex.7
-        {
-            Console.Write("Enter lenght of array: ");
-            int[] arr = GenerateArray(Convert.ToInt32(Console.ReadLine()));
-            Console.Write("Your array: ");
-            WriteArray(arr);
-            Console.Write($"\nCount of odd elements: {FindCountOfOddElements(arr)}");
-        }
-
-        public static int FindCountOfOddElements(int[] a)
+        public static int FindCountOfOddElements(int[] a) //ex.7
         {
             int count = 0;
 
