@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HW4
 {
-    class Array
+    class MyArray
     {
         #region Generate and Write Arrays
         public static int[] GenerateArray(int lenght)
@@ -33,9 +33,9 @@ namespace HW4
         public static void GetSolution() //help with program.cs
         {
             Console.Write("Enter lenght of array: ");
-            int[] arr = Array.GenerateArray(Convert.ToInt32(Console.ReadLine()));
+            int[] arr = MyArray.GenerateArray(Convert.ToInt32(Console.ReadLine()));
             Console.Write("Your array: ");
-            Array.WriteArray(arr);
+            MyArray.WriteArray(arr);
             Console.Write($"\nAnswer: ");
         }
         #endregion
@@ -146,7 +146,17 @@ namespace HW4
             return count;
         }
         
+        public static void SwapHalfsOfArray(int[] a) //ex.8
+        {
+            int[] tmp = new int[a.Length];
+            
+            
 
+            for (int i=0; i<a.Length/2; i++)
+            {
+
+            }
+        }
 
         
     }
