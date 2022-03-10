@@ -201,7 +201,7 @@ namespace HW4
             }
         }
 
-        public static void SortBySelectInDescending(int[] a)
+        public static void SortBySelectInDescending(int[] a) //ex.10
         {
             int[] newArr = CopyArray(a);
             int tmp;

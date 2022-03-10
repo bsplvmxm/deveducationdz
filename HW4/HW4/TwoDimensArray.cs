@@ -125,7 +125,7 @@ namespace HW4
             return index;
         }
 
-        public static int FindCountBiggerElementsOfNeighbours(int[,] a)
+        public static int FindCountBiggerElementsOfNeighbours(int[,] a) //ex.5
         {
             int count = 0;
             
