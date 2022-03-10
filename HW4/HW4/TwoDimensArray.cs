@@ -124,5 +124,23 @@ namespace HW4
             }
             return index;
         }
+
+        public static int FindCountBiggerElementsOfNeighbours(int[,] a)
+        {
+            int count = 0;
+            
+
+            for (int i = 0; i < a.GetLength(0)-1; i++)
+            {
+                for (int j = 0; j < a.GetLength(1)-1; j++)
+                {
+                    if (a[i, j] > a[i + 1, j] )
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
     }
 }
