@@ -11,6 +11,11 @@ namespace HW4
         #region HelpPrograms
         public static int[] GenerateArray(int lenght)
         {
+            if (lenght < 0)
+            {
+                throw new Exception("lenght must be > 0");
+            }
+
             Random r = new Random();
 
             int[] arr = new int[lenght];
