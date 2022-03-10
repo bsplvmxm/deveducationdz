@@ -152,17 +152,24 @@ namespace HW4
             }
             return count;
         }
-        
+
         public static void SwapHalfsOfArray(int[] a) //ex.8
         {
-            int[] tmp = CopyArray(a);
+            int[] newArr = CopyArray(a);
+            int leng = a.Length / 2;
+            int tmp;
 
-            for (int i=0; i<a.Length/2; i++)
+            for (int i = 0; i < leng; i++)
             {
+                tmp = newArr[a.Length - i - 1];
+                newArr[a.Length - i - 1] = newArr[leng - i - 1];
+                newArr[leng - i - 1] = tmp;
+            }
 
+            for (int i = 0; i < newArr.Length; i++)
+            {
+                Console.Write(newArr[i] + " ");
             }
         }
-
-        
     }
 }
