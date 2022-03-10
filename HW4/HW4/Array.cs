@@ -201,6 +201,30 @@ namespace HW4
             }
         }
 
-        
+        public static void SortBySelectInDescending(int[] a)
+        {
+            int[] newArr = CopyArray(a);
+            int tmp;
+
+            for (int i = 0; i < a.Length-1; i++)
+            {
+                int max = i;
+                for (int j = i + 1; j < a.Length; j++)
+                {
+                    if (newArr[j] > newArr[max])
+                    {
+                        max = j;
+                    }
+                }
+                tmp = newArr[max];
+                newArr[max] = newArr[i];
+                newArr[i] = tmp;
+            }
+
+            for (int i = 0; i < newArr.Length; i++)
+            {
+                Console.Write(newArr[i] + " ");
+            }
+        }
     }
 }
