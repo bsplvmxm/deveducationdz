@@ -176,5 +176,31 @@ namespace HW4
                 Console.Write(newArr[i] + " ");
             }
         }
+
+        public static void SortByBubbleInAscending(int[] a) //ex.9
+        {
+            int[] newArr = CopyArray(a);
+            int tmp;
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                for (int j = i + 1; j < a.Length; j++)
+                {
+                    if (newArr[i] > newArr[j])
+                    {
+                        tmp = newArr[i];
+                        newArr[i] = newArr[j];
+                        newArr[j] = tmp;
+                    }
+                }
+            }
+            
+            for (int i = 0; i < newArr.Length; i++)
+            {
+                Console.Write(newArr[i] + " ");
+            }
+        }
+
+        
     }
 }
