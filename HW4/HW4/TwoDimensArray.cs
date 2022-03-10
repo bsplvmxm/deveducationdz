@@ -44,7 +44,7 @@ namespace HW4
 
         public static void GetSolutionTDA() //help with program.cs
         {
-            Console.Write("Enter lenght of array: ");
+            Console.WriteLine("Enter lenght of array: ");
             int a = Convert.ToInt32(Console.ReadLine());
             int b = Convert.ToInt32(Console.ReadLine());
             int[,] arr = TwoDimensArray.GenerateTwoDimensArray(a,b);
@@ -68,6 +68,23 @@ namespace HW4
                 }
             }
             return min;
+        }
+
+        public static int FindMaxElementOfTDArray(int[,] a) //ex.2
+        {
+            int max= a[0, 0];
+
+            for (int i = 0; i < a.GetLength(0); i++)
+            {
+                for (int j = 0; j < a.GetLength(1); j++)
+                {
+                    if (a[i, j] > max)
+                    {
+                        max = a[i, j];
+                    }
+                }
+            }
+            return max;
         }
     }
 }
