@@ -86,5 +86,43 @@ namespace HW4
             }
             return max;
         }
+
+        public static string FindIndexMinElementOfTDArray(int[,] a) //ex.3
+        {
+            int min = a[0,0];
+            string index = "";
+
+            for (int i = 0; i < a.GetLength(0); i++)
+            {
+                for (int j = 0; j < a.GetLength(1); j++)
+                {
+                    if (a[i, j] < min)
+                    {
+                        min = a[i, j];
+                        index = $"({i},{j})";
+                    }
+                }
+            }
+            return index;
+        }
+
+        public static string FindIndexMaxElementOfTDArray(int[,] a) //ex.4
+        {
+            int max = a[0, 0];
+            string index = "";
+
+            for (int i = 0; i < a.GetLength(0); i++)
+            {
+                for (int j = 0; j < a.GetLength(1); j++)
+                {
+                    if (a[i, j] > max)
+                    {
+                        max = a[i, j];
+                        index = $"({i},{j})";
+                    }
+                }
+            }
+            return index;
+        }
     }
 }
