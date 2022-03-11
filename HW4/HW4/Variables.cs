@@ -8,7 +8,7 @@ namespace HW4
 {
     static class Variables
     {
-        public static int GetSolutionOfFormula(int A, int B)
+        public static int GetSolutionOfFormula(int A, int B) //ex.2
         {
             if (B==A)
             {
@@ -19,7 +19,7 @@ namespace HW4
             return result;
         }
         
-        public static double GetSolutionOfLinearEquation(int A, double B, int C)
+        public static double GetSolutionOfLinearEquation(int A, double B, int C) //ex.4
         {
             if (A==0)
             {
@@ -30,7 +30,7 @@ namespace HW4
             return result;
         }
 
-        public static string GetEquationOfStraightLine(int X1, int X2, int Y1, int Y2)
+        public static string GetEquationOfStraightLine(int X1, int X2, int Y1, int Y2) //ex.5
         {
             if (X1==X2)
             {
@@ -55,7 +55,7 @@ namespace HW4
             return result;
         }
 
-        public static void OutputDivisionAndDivisionRemainder(int A, int B, out int res1, out int res2)
+        public static void OutputDivisionAndDivisionRemainder(int A, int B, out int res1, out int res2) //ex.1
         {
             if (B==0)
             {
@@ -66,7 +66,7 @@ namespace HW4
             res2 = A % B;
         }
 
-        public static void SwapContent(string A, string B, out string copyA, out string copyB)
+        public static void SwapContent(string A, string B, out string copyA, out string copyB) //ex.3
         {
             copyA = B;
             copyB = A;

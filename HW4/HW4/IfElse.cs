@@ -8,7 +8,7 @@ namespace HW4
 {
     class IfElse
     {
-        public static int GetSolutionAfterComparison(int A, int B)
+        public static int GetSolutionAfterComparison(int A, int B) //ex.1
         {
             int result = 0;
 
@@ -28,7 +28,7 @@ namespace HW4
             return result;
         }
 
-        public static string GetNumberOfQuarter(int X, int Y)
+        public static string GetNumberOfQuarter(int X, int Y) //ex.2
         {
             string result = "";
 
@@ -52,7 +52,7 @@ namespace HW4
             return result;
         }
 
-        public static string GetNumberInWords(int number)
+        public static string GetNumberInWords(int number) //ex.5
         {
             int tenth = number / 10;
             int unit = number % 10;
@@ -180,7 +180,7 @@ namespace HW4
         }
 
         #region FindSolutionOfQuadraticEquation
-        public static void SolutionTheQuadraticEquation(int A, int B, int C, out string res)
+        public static void SolutionTheQuadraticEquation(int A, int B, int C, out string res) //ex.4
         {
             double discriminant = FindDiscriminantOfQuadraticEquation(A, B, C);
             res = FindTheRootsOfQuadraticEquation(A, B, discriminant);
@@ -211,9 +211,6 @@ namespace HW4
         }
         #endregion
        
-
-        #region OutputNumbersInAscendingOrder
-       
-        #endregion
+        
     }
 }
