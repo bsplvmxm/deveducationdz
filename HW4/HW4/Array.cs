@@ -129,7 +129,7 @@ namespace HW4
             return summ;
         }
 
-        public static void ReverseArray(int[] a) //ex.6
+        public static int[] ReverseArray(int[] a) //ex.6
         {
             int[] tmp = new int[a.Length];
             
@@ -137,11 +137,8 @@ namespace HW4
             {
                 tmp[i] += a[a.Length - 1 - i];
             }
-            
-            for (int i = 0; i < tmp.Length; i++)
-            {
-                Console.Write(tmp[i] + " ");
-            }
+
+            return tmp;
         }
 
         public static int FindCountOfOddElements(int[] a) //ex.7
@@ -158,7 +155,7 @@ namespace HW4
             return count;
         }
 
-        public static void SwapHalfsOfArray(int[] a) //ex.8
+        public static int[] SwapHalfsOfArray(int[] a) //ex.8
         {
             int[] newArr = CopyArray(a);
             int leng = a.Length / 2;
@@ -171,13 +168,10 @@ namespace HW4
                 newArr[leng - i - 1] = tmp;
             }
 
-            for (int i = 0; i < newArr.Length; i++)
-            {
-                Console.Write(newArr[i] + " ");
-            }
+            return newArr;
         }
 
-        public static void SortByBubbleInAscending(int[] a) //ex.9
+        public static int[] SortByBubbleInAscending(int[] a) //ex.9
         {
             int[] newArr = CopyArray(a);
             int tmp;
@@ -194,14 +188,11 @@ namespace HW4
                     }
                 }
             }
-            
-            for (int i = 0; i < newArr.Length; i++)
-            {
-                Console.Write(newArr[i] + " ");
-            }
+
+            return newArr;
         }
 
-        public static void SortBySelectInDescending(int[] a) //ex.10
+        public static int[] SortBySelectInDescending(int[] a) //ex.10
         {
             int[] newArr = CopyArray(a);
             int tmp;
@@ -221,10 +212,7 @@ namespace HW4
                 newArr[i] = tmp;
             }
 
-            for (int i = 0; i < newArr.Length; i++)
-            {
-                Console.Write(newArr[i] + " ");
-            }
+            return newArr;
         }
     }
 }
