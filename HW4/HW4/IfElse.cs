@@ -211,6 +211,24 @@ namespace HW4
         }
         #endregion
        
-        
+        public static int[] GetNumbersInAscending(int A, int B, int C) //ex.3
+        {
+            int[] newArr = new int[] { A, B, C };
+            int tmp;
+
+            for (int i = 0; i < newArr.Length; i++)
+            {
+                for (int j = i + 1; j < newArr.Length; j++)
+                {
+                    if (newArr[i] > newArr[j])
+                    {
+                        tmp = newArr[i];
+                        newArr[i] = newArr[j];
+                        newArr[j] = tmp;
+                    }
+                }
+            }
+            return newArr;
+        }
     }
 }
