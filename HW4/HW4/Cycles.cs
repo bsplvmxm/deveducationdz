@@ -8,7 +8,7 @@ namespace HW4
 {
     class Cycles
     {
-        public static int RaiseNumberToDegree(int A, int B)
+        public static int RaiseNumberToDegree(int A, int B) //ex.1
         {
             int number = 1;
 
@@ -19,7 +19,7 @@ namespace HW4
             return number;
         }
 
-        public static int GetAmountOfPositiveNumbers(int A)
+        public static int GetAmountOfPositiveNumbers(int A) //ex.3
         {
             int amount = 0;
             
@@ -35,7 +35,7 @@ namespace HW4
             return amount;
         }
 
-        public static int PrintTheLargestDivisor(int A)
+        public static int PrintTheLargestDivisor(int A) //ex.4
         {
             int maxDivider = 0;
 
@@ -54,7 +54,7 @@ namespace HW4
             return maxDivider;
         }
 
-        public static int GetSummOfNumbersFromRange(int A, int B)
+        public static int GetSummOfNumbersFromRange(int A, int B) //ex.5
         {
             int summ = 0;
             int tmp;
@@ -75,7 +75,7 @@ namespace HW4
             return summ;
         }
 
-        public static int GetFibonacciNumber(int N)
+        public static int GetFibonacciNumber(int N) //ex.6
         {
             int first = 1;
             int second = 1;
@@ -93,7 +93,7 @@ namespace HW4
             return fibonacci;
         }
 
-        public static int GetLargestDivisorByEuclidean(int A, int B)
+        public static int GetLargestDivisorByEuclidean(int A, int B) //ex.7
         {
             int nod;
 
@@ -113,7 +113,7 @@ namespace HW4
             return nod;
         }
 
-        public static int FindNumberByHalfDivisionMethod(int N)
+        public static int FindNumberByHalfDivisionMethod(int N) //ex.8
         {
             int a = 0;
             int b = N;
@@ -135,7 +135,7 @@ namespace HW4
             return half;
         }
 
-        public static int GetAmountOddDigitsOfNumber(int number)
+        public static int GetAmountOddDigitsOfNumber(int number) //ex.9
         {
             int decade;
             int amount = 0;
@@ -153,7 +153,7 @@ namespace HW4
             return amount;
         }
 
-        public static int FindMirroredNumber(int number)
+        public static int FindMirroredNumber(int number) //ex.10
         {
             int decade;
             int tmp = 0;
@@ -169,7 +169,7 @@ namespace HW4
             return tmp;
         }
 
-        public static bool FindIfThereSameDigits(int number1, int number2)
+        public static bool FindIfThereSameDigits(int number1, int number2) //ex.12
         {
             bool check = false;
             int decade;
@@ -189,7 +189,19 @@ namespace HW4
             return check;
         }
 
-        
+        public static int[] GetNumbersWhichDecadeOnNumber(int A) //ex.2
+        {
+            int[] arr = new int[1000];
+
+            for (int i = 1; i < arr.Length; i += A)
+            {
+                if (arr[i] / A == 0)
+                {
+
+                }
+            }
+            return arr;
+        }
     }
 
 }
