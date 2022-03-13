@@ -145,5 +145,21 @@ namespace HW4
             }
             return count;
         }
+
+        public static int[,] ReflectMirroredDiagonally(int[,] a) //ex.6
+        {
+            int tmp;
+            
+            for (int i = 0; i < a.GetLength(0); i++)
+            {
+                for (int j = i + 1; j < a.GetLength(1); j++)
+                {
+                    tmp = a[i, j];
+                    a[i, j] = a[j, i];
+                    a[j, i] = tmp;
+                }
+            }
+            return a;
+        }
     }
 }
