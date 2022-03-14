@@ -35,5 +35,34 @@ namespace HW4.Test
         {
             Assert.Throws<Exception>(() => Cycles.GetNumbersWhichDecadeOnNumber(A));
         }
+
+        [TestCase(6,2)]
+        [TestCase(12,3)]
+        [TestCase(25,4)]
+        public void GetAmountOfPositiveNumbersTest(int A, int expected)
+        {
+            int actual = Cycles.GetAmountOfPositiveNumbers(A);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(-5)]
+        public void GetAmountOfPositiveNumbersTest_WhenALessThanZero_ShouldThrowException(int A)
+        {
+            Assert.Throws<Exception>(() => Cycles.GetAmountOfPositiveNumbers(A));
+        }
+
+        [TestCase(624,312)]
+        [TestCase(220,110)]
+        public void PrintTheLargestDivisorTest(int A, int expected)
+        {
+            int actual = Cycles.PrintTheLargestDivisor(A);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(-228)]
+        public void PrintTheLargestDivisorTest_WhenALessThanZero_ShouldThrowException(int A)
+        {
+            Assert.Throws<Exception>(() => Cycles.PrintTheLargestDivisor(A));
+        }
     }
 }
