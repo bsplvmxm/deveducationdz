@@ -58,5 +58,14 @@ namespace HW4.Test
             int[] actual = MyArray.ReverseArray(a);
             Assert.AreEqual(expected, actual);
         }
+
+        [TestCase(new int[] { 6, 1, 63, 22 }, 2)]
+        [TestCase(new int[] { -9, -5, -29 }, 3)]
+        [TestCase(new int[] { -11, 69, 4, -2, 89 }, 3)]
+        public void FindCountOfOddElementsTest(int[] a, int expected)
+        {
+            int actual = MyArray.FindCountOfOddElements(a);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
