@@ -21,5 +21,21 @@ namespace HW4.Test
         {
             Assert.Throws<Exception>(() => Variables.GetSolutionOfFormula(A, B));
         }
+
+        [TestCase(2,3,7,2)]
+        [TestCase(4,5,17,3)]
+        [TestCase(5,33,-8,-8.2)]
+        public void GetSolutionOfLinearEquationTest(int A, double B, int C, double expected)
+        {
+            double actual = Variables.GetSolutionOfLinearEquation(A, B, C);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0,3,5)]
+        [TestCase(0,-24,11)]
+        public void GetSolutionOfLinearEquationTest_WhenAEqualZero_ShouldThrowException(int A, int B, int C)
+        {
+            Assert.Throws<Exception>(() => Variables.GetSolutionOfLinearEquation(A, B, C));
+        }
     }
 }
