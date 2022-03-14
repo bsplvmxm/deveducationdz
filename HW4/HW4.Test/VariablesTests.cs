@@ -5,6 +5,29 @@ namespace HW4.Test
 {
     public class VariablesTests
     {
+        [TestCase(6,3,2,0)]
+        [TestCase(20,3,6,2)]
+        [TestCase(-8,2,-4,0)]
+        [TestCase(-28,-3,9,-1)]
+        public void OutputDivisionAndDivisionRemainderTest(int A, int B, int expected1, int expected2)
+        {
+            int actual1;
+            int actual2;
+
+            Variables.OutputDivisionAndDivisionRemainder(A, B, out actual1, out actual2);
+            Assert.AreEqual(expected1, actual1);
+            Assert.AreEqual(expected2, actual2);        
+        }
+
+        [TestCase(5,0)]
+        [TestCase(-7,0)]
+        public void OutputDivisionAndDivisionRemainderTest_WhenBEqualZero_ShouldThrowException(int A, int B)
+        {
+            int res1;
+            int res2;
+            Assert.Throws<Exception>(() => Variables.OutputDivisionAndDivisionRemainder(A, B, out res1, out res2));
+        }
+
         [TestCase(1,2,9)]
         [TestCase(4,6,28)]
         [TestCase(-3,-6,-7)]
@@ -20,6 +43,18 @@ namespace HW4.Test
         public void GetSolutionOfFormulaTest_WhenAEqualB_ShouldThrowException(int A, int B)
         {
             Assert.Throws<Exception>(() => Variables.GetSolutionOfFormula(A, B));
+        }
+
+        [TestCase("privet","poka","poka","privet")]
+        [TestCase("12345q","ggwp","ggwp","12345q")]
+        public void SwapContentTest(string A, string B, string expected1, string expected2)
+        {
+            string actual1;
+            string actual2;
+
+            Variables.SwapContent(A, B, out actual1, out actual2);
+            Assert.AreEqual(expected1, actual1);
+            Assert.AreEqual(expected2, actual2);
         }
 
         [TestCase(2,3,7,2)]
@@ -55,27 +90,5 @@ namespace HW4.Test
             Assert.Throws<Exception>(() => Variables.GetEquationOfStraightLine(X1, X2, Y1, Y2));
         }
 
-        [TestCase(6,3,2,0)]
-        [TestCase(20,3,6,2)]
-        [TestCase(-8,2,-4,0)]
-        [TestCase(-28,-3,9,-1)]
-        public void OutputDivisionAndDivisionRemainderTest(int A, int B, int expected1, int expected2)
-        {
-            int actual1;
-            int actual2;
-
-            Variables.OutputDivisionAndDivisionRemainder(A, B, out actual1, out actual2);
-            Assert.AreEqual(expected1, actual1);
-            Assert.AreEqual(expected2, actual2);        
-        }
-
-        [TestCase(5,0)]
-        [TestCase(-7,0)]
-        public void OutputDivisionAndDivisionRemainderTest_WhenBEqualZero_ShouldThrowException(int A, int B)
-        {
-            int res1;
-            int res2;
-            Assert.Throws<Exception>(() => Variables.OutputDivisionAndDivisionRemainder(A, B, out res1, out res2));
-        }
     }
 }
