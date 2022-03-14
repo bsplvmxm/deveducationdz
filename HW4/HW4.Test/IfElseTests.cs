@@ -24,7 +24,34 @@ namespace HW4.Test
         {
             Quarters actual = IfElse.GetNumberOfQuarter(X, Y);
             Assert.AreEqual(expected, actual);
+        }
 
+        [TestCase(5,1,3,new int[] { 1, 3, 5 })]
+        [TestCase(4,7,1,new int[] { 1, 4, 7 })]
+        [TestCase(1,2,3,new int[] { 1, 2, 3 })]
+        [TestCase(9,-6,-5,new int[] { -6, -5, 9 })]
+        [TestCase(7,7,7,new int[] { 7, 7, 7 })]
+        public void GetNumbersInAscendingTest(int A, int B, int C, int[] expected)
+        {
+            int[] actual = IfElse.GetNumbersInAscending(A, B, C);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(1,-2,-3,new double[] { 3, -1 })]
+        [TestCase(-1,-2,15,new double[] { -5, 3 })]
+        [TestCase(1,12,36,new double[] { -6 })]
+        [TestCase(5,3,7,new double[] { })]
+        public void GetSolutionOfQuadraticEquationTest(int A, int B, int C, double[] expected)
+        {
+            double[] actual = IfElse.GetSolutionOfQuadraticEquation(A, B, C);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0,2,6)]
+        [TestCase(0,-5,14)]
+        public void GetSolutionOfQuadraticEquationTest_WhenAEqualZero_ShouldThrowException(int A, int B, int C)
+        {
+            Assert.Throws<Exception>(() => IfElse.GetSolutionOfQuadraticEquation(A, B, C));
         }
     }
 }
