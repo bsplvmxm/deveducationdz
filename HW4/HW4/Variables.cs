@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HW4
 {
-    static class Variables
+    public static class Variables
     {
         public static int GetSolutionOfFormula(int A, int B) //ex.2
         {
