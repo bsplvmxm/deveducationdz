@@ -54,5 +54,28 @@ namespace HW4.Test
         {
             Assert.Throws<Exception>(() => Variables.GetEquationOfStraightLine(X1, X2, Y1, Y2));
         }
+
+        [TestCase(6,3,2,0)]
+        [TestCase(20,3,6,2)]
+        [TestCase(-8,2,-4,0)]
+        [TestCase(-28,-3,9,-1)]
+        public void OutputDivisionAndDivisionRemainderTest(int A, int B, int expected1, int expected2)
+        {
+            int actual1;
+            int actual2;
+
+            Variables.OutputDivisionAndDivisionRemainder(A, B, out actual1, out actual2);
+            Assert.AreEqual(expected1, actual1);
+            Assert.AreEqual(expected2, actual2);        
+        }
+
+        [TestCase(5,0)]
+        [TestCase(-7,0)]
+        public void OutputDivisionAndDivisionRemainderTest_WhenBEqualZero_ShouldThrowException(int A, int B)
+        {
+            int res1;
+            int res2;
+            Assert.Throws<Exception>(() => Variables.OutputDivisionAndDivisionRemainder(A, B, out res1, out res2));
+        }
     }
 }
