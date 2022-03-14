@@ -64,5 +64,28 @@ namespace HW4.Test
         {
             Assert.Throws<Exception>(() => Cycles.PrintTheLargestDivisor(A));
         }
+
+        [TestCase(2,19,21)]
+        [TestCase(16,30,49)]
+        [TestCase(-15,25,21)]
+        public void GetSummOfNumbersFromRangeTest(int A, int B, int expected)
+        {
+            int actual = Cycles.GetSummOfNumbersFromRange(A, B);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(5,5)]
+        [TestCase(12,144)]
+        public void GetFibonacciNumberTest(int N, int expected)
+        {
+            int actual = Cycles.GetFibonacciNumber(N);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(-22)]
+        public void GetFibonacciNumberTest_WhenNLessThanZero_ShouldThrowException(int N)
+        {
+            Assert.Throws<Exception>(() => Cycles.GetFibonacciNumber(N));
+        }
     }
 }
