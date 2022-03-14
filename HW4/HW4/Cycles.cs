@@ -225,14 +225,7 @@ namespace HW4
         public static int[] GetSummEvenNumWhichHigherOddNum(int N) //ex.11
         {
             int decade;
-            int count = 0;    
-            for (int i = 0; i < N; i++)
-            {
-                count++;
-            }
-
-            int[] arr = new int[count];
-            int arrNum = 0;
+            int countEven = 0;    
             
             for (int i = 0; i < N; i++)
             {
@@ -254,11 +247,39 @@ namespace HW4
                     tmp /= 10;
                 }
                 if (summEven>summOdd)
-                {    
-                    arr[arrNum] = i;
-                    arrNum++;
+                {
+                    countEven++;
                 }
             }
+
+            int[] arr = new int[countEven];
+            int count = 0;
+
+            for (int i = 0; i < N; i++)
+            {
+                int tmp = i;
+                int summEven = 0;
+                int summOdd = 0;
+                while (tmp != 0)
+                {
+                    decade = tmp % 10;
+                    if (tmp % 2 == 0)
+                    {
+                        summEven += decade;
+                    }
+                    else
+                    {
+                        summOdd += decade;
+                    }
+                    tmp /= 10;
+                }
+                if (summEven > summOdd)
+                {
+                    arr[count] = i;
+                    count++;
+                }
+            }
+
             return arr;
         }
     }
