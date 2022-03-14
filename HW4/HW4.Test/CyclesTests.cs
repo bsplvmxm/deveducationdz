@@ -155,5 +155,35 @@ namespace HW4.Test
         {
             Assert.Throws<Exception>(() => Cycles.FindMirroredNumber(number));
         }
+
+        [TestCase(10,new int[] { 2, 4, 6, 8 })]
+        [TestCase(25,new int[] { 2, 4, 6, 8, 12, 14, 16, 18, 20, 21, 22, 24 })]
+        public void GetSummEvenNumWhichHigherOddNumTest(int N, int[] expected)
+        {
+            int[] actual = Cycles.GetSummEvenNumWhichHigherOddNum(N);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(-55)]
+        [TestCase(0)]
+        public void GetSummEvenNumWhichHigherOddNumTest_WhenNLessThanZero_ShouldThrowException(int N)
+        {
+            Assert.Throws<Exception>(() => Cycles.GetSummEvenNumWhichHigherOddNum(N));
+        }
+
+        [TestCase(123,3456789,true)]
+        [TestCase(500,99,false)]
+        public void FindIfThereSameDigitsTest(int number1, int number2, bool expected)
+        {
+            bool actual = Cycles.FindIfThereSameDigits(number1, number2);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(-21,123)]
+        [TestCase(0,7582)]
+        public void FindIfThereSameDigitsTest_WhenN1OrN2LessThanZero_ShouldThrowException(int number1, int number2)
+        {
+            Assert.Throws<Exception>(() => Cycles.FindIfThereSameDigits(number1,number2));
+        }
     }
 }
