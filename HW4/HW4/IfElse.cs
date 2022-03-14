@@ -191,37 +191,37 @@ namespace HW4
                 return result;
         }
 
-        #region FindSolutionOfQuadraticEquation
-        public static void SolutionTheQuadraticEquation(int A, int B, int C, out string res) //ex.4
+        public static double[] GetSolutionOfQuadraticEquation(int A, int B, int C) //ex.4
         {
-            double discriminant = FindDiscriminantOfQuadraticEquation(A, B, C);
-            res = FindTheRootsOfQuadraticEquation(A, B, discriminant);
-        }
+            if (A==0)
+            {
+                throw new Exception("A mustn't be equal 0");
+            }
 
-        public static int FindDiscriminantOfQuadraticEquation(int A, int B, int C)
-        {
-            return (B * B) - (4 * A * C);
-        }
+            double discriminant = (B * B) - (4 * A * C);
+            double X1;
+            double X2;
 
-        public static string FindTheRootsOfQuadraticEquation(int A, int B, double discriminant)
-        {
             if (discriminant > 0)
             {
-                double X1 = ((double)(-B) + (Math.Sqrt(discriminant))) / (2 * A);
-                double X2 = ((double)(-B) - (Math.Sqrt(discriminant))) / (2 * A);
-                return $"Answer: X1={X1}; X2={X2}";
+                X1 = ((-B) + (Math.Sqrt(discriminant))) / (2 * A);
+                X2 = ((-B) - (Math.Sqrt(discriminant))) / (2 * A);
+                double[] res = new double[2] { X1, X2 };
+                return res;
             }
             else if (discriminant == 0)
             {
-                double X = ((double)(-B) / (2 * A));
-                return $"Answer: We've one root: {X}";
+                X1 = (-B) / (2 * A);
+                double[] res = new double[1] { X1 };
+                return res;
             }
             else
             {
-                return "Answer: No roots. No solutions.";
+                double[] res = new double[0];
+                return res;
             }
-        }
-        #endregion
+            
+        }        
        
         public static int[] GetNumbersInAscending(int A, int B, int C) //ex.3
         {
