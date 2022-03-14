@@ -191,13 +191,32 @@ namespace HW4
 
         public static int[] GetNumbersWhichDecadeOnNumber(int A) //ex.2
         {
-            int[] arr = new int[1000];
-
-            for (int i = 1; i < arr.Length; i += A)
+            if (A == 0)
             {
-                if (arr[i] / A == 0)
-                {
+                throw new Exception("A mustn't be equal 0");
+            }
 
+            if (A < 0)
+            {
+                A = A * (-1);
+            }
+
+            int count = 0;
+            
+            for (int i = A; i <= 1000; i+=A)
+            {                
+                count++;               
+            }
+
+            int[] arr = new int[count];
+            int tmp = 0;
+
+            for (int i = A; i <= 1000; i+=A)
+            {
+                if (i % A == 0)
+                {
+                    arr[tmp] = i;
+                    tmp++;
                 }
             }
             return arr;
