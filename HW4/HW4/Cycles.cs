@@ -224,6 +224,11 @@ namespace HW4
 
         public static int[] GetSummEvenNumWhichHigherOddNum(int N) //ex.11
         {
+            if (N < 0)
+            {
+                throw new Exception("N must be >0");
+            }
+
             int decade;
             int countEven = 0;    
             
