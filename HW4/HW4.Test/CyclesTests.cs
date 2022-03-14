@@ -123,5 +123,37 @@ namespace HW4.Test
         {
             Assert.Throws<Exception>(() => Cycles.FindNumberByHalfDivision(N));
         }
+
+        [TestCase(125,2)]
+        [TestCase(2951,3)]
+        [TestCase(552147,4)]
+        public void GetAmountOddDigitsOfNumberTest(int number, int expected)
+        {
+            int actual = Cycles.GetAmountOddDigitsOfNumber(number);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(-19)]
+        [TestCase(0)]
+        public void GetAmountOddDigitsOfNumberTest_WhenNumberLessThanZero_ShouldThrowException(int number)
+        {
+            Assert.Throws<Exception>(() => Cycles.GetAmountOddDigitsOfNumber(number));
+        }
+
+        [TestCase(100,1)]
+        [TestCase(1234,4321)]
+        [TestCase(51426,62415)]
+        public void FindMirroredNumberTest(int number, int expected)
+        {
+            int actual = Cycles.FindMirroredNumber(number);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(-11)]
+        [TestCase(0)]
+        public void FindMirroredNumberTest_WhenNumberLessThanZero_ShouldThrowException(int number)
+        {
+            Assert.Throws<Exception>(() => Cycles.FindMirroredNumber(number));
+        }
     }
 }
