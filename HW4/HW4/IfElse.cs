@@ -4,6 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+public enum Quarters
+{
+    I,
+    II,
+    III,
+    IV,
+    OnAxle
+}
+
 namespace HW4
 {
     public class IfElse
@@ -26,14 +35,6 @@ namespace HW4
             }
 
             return result;
-        }
-        public enum Quarters
-        {
-            I,
-            II,
-            III,
-            IV,
-            OnAxle
         }
 
         public static Quarters GetNumberOfQuarter(int X, int Y) //ex.2
