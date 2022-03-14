@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HW4
 {
-    class IfElse
+    public class IfElse
     {
         public static int GetSolutionAfterComparison(int A, int B) //ex.1
         {
@@ -27,28 +27,39 @@ namespace HW4
 
             return result;
         }
-
-        public static string GetNumberOfQuarter(int X, int Y) //ex.2
+        public enum Quarters
         {
-            string result = "";
+            I,
+            II,
+            III,
+            IV,
+            OnAxle
+        }
+
+        public static Quarters GetNumberOfQuarter(int X, int Y) //ex.2
+        {        
+            Quarters result;
 
             if (X > 0 && Y > 0)
             {
-                result = "The First Quarter";
+                result = Quarters.I;
             }
             else if (X < 0 && Y > 0)
             {
-                result = "The Second Quarter";
+                result = Quarters.II;
             }
             else if (X < 0 && Y < 0)
             {
-                result = "The Third Quarter";
+                result = Quarters.III;
             }
             else if (X > 0 && Y < 0)
             {
-                result = "The Fourth Quarter";
+                result = Quarters.IV;
             }
-
+            else
+            {
+                result = Quarters.OnAxle;
+            }
             return result;
         }
 
