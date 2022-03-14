@@ -53,5 +53,23 @@ namespace HW4.Test
         {
             Assert.Throws<Exception>(() => IfElse.GetSolutionOfQuadraticEquation(A, B, C));
         }
+
+        [TestCase(25, "Двадцать Пять")]
+        [TestCase(19, "Девятнадцать")]
+        [TestCase(72, "Семьдесят Два")]
+        [TestCase(99, "Девяносто Девять")]
+        public void GetNumberInWordsTest(int number, string expected)
+        {
+            string actual = IfElse.GetNumberInWords(number);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(6)]
+        [TestCase(-2)]
+        [TestCase(111)]
+        public void GetNumberInWordsTest_WhenNumberLessThan10AndHigherThan99_ShouldThrowException(int number)
+        {
+            Assert.Throws<Exception>(() => IfElse.GetNumberInWords(number));
+        }
     }
 }
