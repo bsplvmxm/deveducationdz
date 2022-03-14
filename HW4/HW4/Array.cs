@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HW4
 {
-    class MyArray
+    public class MyArray
     {
         #region HelpPrograms
         public static int[] GenerateArray(int lenght)

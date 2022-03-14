@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HW4
 {
-    class TwoDimensArray
+    public class TwoDimensArray
     {
         #region HelpPrograms2
         public static int[,] GenerateTwoDimensArray(int a, int b)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HW4
 {
-    class Cycles
+    public class Cycles
     {
         public static int RaiseNumberToDegree(int A, int B) //ex.1
         {
