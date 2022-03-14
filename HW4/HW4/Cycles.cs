@@ -10,6 +10,11 @@ namespace HW4
     {
         public static int RaiseNumberToDegree(int A, int B) //ex.1
         {
+            if (B <= 0)
+            {
+                throw new Exception("B must be >0");
+            }
+
             int number = 1;
 
             for (int i = 0; i < B; i++)
@@ -21,6 +26,11 @@ namespace HW4
 
         public static int GetAmountOfPositiveNumbers(int A) //ex.3
         {
+            if (A <= 0)
+            {
+                throw new Exception("A must be >0");
+            }
+
             int amount = 0;
             
             for (int i = 1; i < A; i++)
@@ -37,6 +47,11 @@ namespace HW4
 
         public static int PrintTheLargestDivisor(int A) //ex.4
         {
+            if (A <= 0)
+            {
+                throw new Exception("A must be >0");
+            }
+
             int maxDivider = 0;
 
             for (int i = 1; i < A; i++)
@@ -77,6 +92,11 @@ namespace HW4
 
         public static int GetFibonacciNumber(int N) //ex.6
         {
+            if (N <= 0)
+            {
+                throw new Exception("N must be >0");
+            }
+
             int first = 1;
             int second = 1;
             int fibonacci = 0;
@@ -95,6 +115,11 @@ namespace HW4
 
         public static int GetLargestDivisorByEuclidean(int A, int B) //ex.7
         {
+            if (A <= 0 || B <= 0)
+            {
+                throw new Exception("A and B should be >0");
+            }
+
             int nod;
 
             while (A != 0 && B != 0)
@@ -113,8 +138,13 @@ namespace HW4
             return nod;
         }
 
-        public static int FindNumberByHalfDivisionMethod(int N) //ex.8
+        public static int FindNumberByHalfDivision(int N) //ex.8
         {
+            if (N <= 0)
+            {
+                throw new Exception("N should be >0");
+            }
+
             int a = 0;
             int b = N;
             int half = 0;
@@ -137,6 +167,11 @@ namespace HW4
 
         public static int GetAmountOddDigitsOfNumber(int number) //ex.9
         {
+            if (number <= 0)
+            {
+                throw new Exception("number must be >0");
+            }
+
             int decade;
             int amount = 0;
 
@@ -155,6 +190,11 @@ namespace HW4
 
         public static int FindMirroredNumber(int number) //ex.10
         {
+            if (number <= 0)
+            {
+                throw new Exception("number must be >0");
+            }
+
             int decade;
             int tmp = 0;
 
@@ -171,6 +211,11 @@ namespace HW4
 
         public static bool FindIfThereSameDigits(int number1, int number2) //ex.12
         {
+            if (number1 <= 0 || number2 <=0)
+            {
+                throw new Exception("number1 and number2 should be >0");
+            }
+
             bool check = false;
             int decade;
 
@@ -191,14 +236,9 @@ namespace HW4
 
         public static int[] GetNumbersWhichDecadeOnNumber(int A) //ex.2
         {
-            if (A == 0)
+            if (A <= 0)
             {
-                throw new Exception("A mustn't be equal 0");
-            }
-
-            if (A < 0)
-            {
-                A = A * (-1);
+                throw new Exception("A must be >0");
             }
 
             int count = 0;
@@ -224,7 +264,7 @@ namespace HW4
 
         public static int[] GetSummEvenNumWhichHigherOddNum(int N) //ex.11
         {
-            if (N < 0)
+            if (N <= 0)
             {
                 throw new Exception("N must be >0");
             }
