@@ -66,6 +66,11 @@ namespace HW4
 
         public static string GetNumberInWords(int number) //ex.5
         {
+            if (number < 10 || number > 99)
+            {
+                throw new Exception("number should be >=10 but <=99");
+            }
+
             int tenth = number / 10;
             int unit = number % 10;
             string tenthNum = "";
