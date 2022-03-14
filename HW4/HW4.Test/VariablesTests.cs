@@ -37,5 +37,22 @@ namespace HW4.Test
         {
             Assert.Throws<Exception>(() => Variables.GetSolutionOfLinearEquation(A, B, C));
         }
+
+        [TestCase(0,1,12,9,"Y=-3X+12")]
+        [TestCase(3,5,5,9,"Y=2X-1")]
+        [TestCase(4,1,-1,5,"Y=-2X+7")]
+        public void GetEquationOfStraightLineTest(int X1, int X2, int Y1, int Y2, string expected)
+        {
+            string actual = Variables.GetEquationOfStraightLine(X1, X2, Y1, Y2);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(2,2,5,1)]
+        [TestCase(-7,-7,3,12)]
+        [TestCase(0,0,1,9)]
+        public void GetEquationOfStraightLineTest_WhenX1EqualX2_ShouldThrowException(int X1, int X2, int Y1, int Y2)
+        {
+            Assert.Throws<Exception>(() => Variables.GetEquationOfStraightLine(X1, X2, Y1, Y2));
+        }
     }
 }
