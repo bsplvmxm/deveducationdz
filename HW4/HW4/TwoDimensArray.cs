@@ -55,6 +55,11 @@ namespace HW4
         #endregion
         public static int FindMinElementOfTDArray(int[,] a) //ex.1
         {
+            if (a.GetLength(0) < 1 || a.GetLength(1) < 1)
+            {
+                throw new Exception("a.GetLength(0) and a.GetLength(1) must be >0");
+            }
+
             int min = a[0,0];
 
             for (int i = 0; i < a.GetLength(0); i++)
@@ -72,6 +77,11 @@ namespace HW4
 
         public static int FindMaxElementOfTDArray(int[,] a) //ex.2
         {
+            if (a.GetLength(0) < 1 || a.GetLength(1) < 1)
+            {
+                throw new Exception("a.GetLength(0) and a.GetLength(1) must be >0");
+            }
+
             int max= a[0, 0];
 
             for (int i = 0; i < a.GetLength(0); i++)
@@ -89,6 +99,11 @@ namespace HW4
 
         public static string FindIndexMinElementOfTDArray(int[,] a) //ex.3
         {
+            if (a.GetLength(0) < 1 || a.GetLength(1) < 1)
+            {
+                throw new Exception("a.GetLength(0) and a.GetLength(1) must be >0");
+            }
+
             int min = a[0,0];
             string index = "";
 
@@ -108,6 +123,11 @@ namespace HW4
 
         public static string FindIndexMaxElementOfTDArray(int[,] a) //ex.4
         {
+            if (a.GetLength(0) < 1 || a.GetLength(1) < 1)
+            {
+                throw new Exception("a.GetLength(0) and a.GetLength(1) must be >0");
+            }
+
             int max = a[0, 0];
             string index = "";
 
@@ -127,6 +147,11 @@ namespace HW4
 
         public static int FindCountBiggerElementsOfNeighbours(int[,] a) //ex.5
         {
+            if (a.GetLength(0) < 1 || a.GetLength(1) < 1)
+            {
+                throw new Exception("a.GetLength(0) and a.GetLength(1) must be >0");
+            }
+
             int count = 0;
             
 
@@ -148,6 +173,11 @@ namespace HW4
 
         public static int[,] ReflectMirroredDiagonally(int[,] a) //ex.6
         {
+            if (a.GetLength(0) < 1 || a.GetLength(1) < 1)
+            {
+                throw new Exception("a.GetLength(0) and a.GetLength(1) must be >0");
+            }
+
             int tmp;
             
             for (int i = 0; i < a.GetLength(0); i++)
