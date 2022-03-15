@@ -20,6 +20,9 @@ namespace HW4
         first,
         second,
         third,
-        empty
+        empty,
+        reflectFirst,
+        reflectSecond,
+        reflectThird
     }
 }
