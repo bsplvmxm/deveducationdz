@@ -14,4 +14,12 @@ namespace HW4
         IV,
         OnAxle
     }
+
+    public enum TDAMockType
+    {
+        first,
+        second,
+        third,
+        empty
+    }
 }
