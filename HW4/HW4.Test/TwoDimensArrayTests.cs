@@ -72,5 +72,41 @@ namespace HW4.Test
             int[,] arr = TDMock.GetMock(type);
             Assert.Throws<Exception>(() => TwoDimensArray.FindIndexMaxElementOfTDArray(arr));
         }
+
+        [TestCase(TDAMockType.first, 3)]
+        [TestCase(TDAMockType.second, 2)]
+        [TestCase(TDAMockType.third, 3)]
+        public void FindCountBiggerElementsOfNeighboursTest(TDAMockType type, int expected)
+        {
+            int[,] arr = TDMock.GetMock(type);
+            int actual = TwoDimensArray.FindCountBiggerElementsOfNeighbours(arr);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(TDAMockType.empty)]
+        public void FindCountBiggerElementsOfNeighboursTest_WhenLenghtsLess1_ShouldThrowException(TDAMockType type)
+        {
+            int[,] arr = TDMock.GetMock(type);
+            Assert.Throws<Exception>(() => TwoDimensArray.FindCountBiggerElementsOfNeighbours(arr));
+        }
+
+        [TestCase(TDAMockType.first, TDAMockType.reflectFirst)]
+        [TestCase(TDAMockType.second, TDAMockType.reflectSecond)]
+        [TestCase(TDAMockType.third, TDAMockType.reflectThird)]
+        public void ReflectMirroredDiagonallyTest(TDAMockType type, TDAMockType type1)
+        {
+            int[,] arr = TDMock.GetMock(type);
+            int[,] expected = TwoDimensArray.ReflectMirroredDiagonally(arr);
+            int[,] actual = TwoDimensArray.ReflectMirroredDiagonally(arr);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(TDAMockType.empty)]
+        public void ReflectMirroredDiagonallyTest_WhenLenghtsLess1_ShouldThrowException(TDAMockType type)
+        {
+            int[,] arr = TDMock.GetMock(type);
+            Assert.Throws<Exception>(() => TwoDimensArray.ReflectMirroredDiagonally(arr));
+        }
     }
 }
+
