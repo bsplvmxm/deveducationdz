@@ -67,5 +67,32 @@ namespace HW4.Test
             int actual = MyArray.FindCountOfOddElements(a);
             Assert.AreEqual(expected, actual);
         }
+
+        [TestCase(new int[] { 1, 2, 3, 4 }, new int[] { 3, 4, 1, 2 })]
+        [TestCase(new int[] { 1, 2, 3, 4, 5 }, new int[] { 4, 5, 3, 1, 2 })]
+        [TestCase(new int[] { -11, 69, 4, -2, 89 }, new int[] { -2, 89, 4, -11, 69 })]
+        public void SwapHalfsOfArrayTest(int[] a, int[] expected)
+        {
+            int[] actual = MyArray.SwapHalfsOfArray(a);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(new int[] { 5, -2, 9, 4 }, new int[] { -2, 4, 5, 9 })]
+        [TestCase(new int[] { 5, 2, 3, 4, 1 }, new int[] { 1, 2, 3, 4, 5 })]
+        [TestCase(new int[] { -11, 69, 4, -2, 89 }, new int[] { -11, -2, 4, 69, 89 })]
+        public void SortByBubbleInAscendingTest(int[] a, int[] expected)
+        {
+            int[] actual = MyArray.SortByBubbleInAscending(a);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(new int[] { 5, -2, 9, 4 }, new int[] { 9, 5, 4, -2 })]
+        [TestCase(new int[] { 5, 2, 3, 4, 1 }, new int[] { 5, 4, 3, 2, 1 })]
+        [TestCase(new int[] { -11, 69, 4, -2, 89 }, new int[] { 89, 69, 4, -2, -11 })]
+        public void SortBySelectInDescendingTest(int[] a, int[] expected)
+        {
+            int[] actual = MyArray.SortBySelectInDescending(a);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
