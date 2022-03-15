@@ -53,6 +53,11 @@ namespace HW4
         #endregion
         public static int FindMinimumElementOfArray(int[] a) //ex.1
         {
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
+
             int min = a[0];
 
             for (int i = 1; i < a.Length; i++)
@@ -68,6 +73,11 @@ namespace HW4
 
         public static int FindMaximumElementOfArray(int[] a) //ex.2
         {
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
+
             int max = a[0];
 
             for (int i = 1; i < a.Length; i++)
@@ -83,6 +93,11 @@ namespace HW4
 
         public static int FindIndexMinElementOfArray(int[] a) //ex.3
         {
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
+
             int min = a[0];
             int index = 0;
 
@@ -100,6 +115,11 @@ namespace HW4
 
         public static int FindIndexMaxElementOfArray(int[] a) //ex.4
         {
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
+
             int max = a[0];
             int index = 0;
 
@@ -117,6 +137,11 @@ namespace HW4
 
         public static int FindSummNumbersOddIndex(int[] a) //ex.5
         {
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
+
             int summ = 0;
 
             for (int i=0; i<a.Length; i++)
@@ -131,6 +156,11 @@ namespace HW4
 
         public static int[] ReverseArray(int[] a) //ex.6
         {
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
+
             int[] tmp = new int[a.Length];
             
             for (int i = 0; i < a.Length; i++)
@@ -143,6 +173,11 @@ namespace HW4
 
         public static int FindCountOfOddElements(int[] a) //ex.7
         {
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
+
             int count = 0;
 
             for (int i = 0; i < a.Length; i++)
@@ -157,6 +192,11 @@ namespace HW4
 
         public static int[] SwapHalfsOfArray(int[] a) //ex.8
         {
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
+
             int[] newArr = CopyArray(a);
             int leng = a.Length / 2;
             int tmp;
@@ -173,6 +213,11 @@ namespace HW4
 
         public static int[] SortByBubbleInAscending(int[] a) //ex.9
         {
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
+
             int[] newArr = CopyArray(a);
             int tmp;
 
@@ -194,6 +239,11 @@ namespace HW4
 
         public static int[] SortBySelectInDescending(int[] a) //ex.10
         {
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
+
             int[] newArr = CopyArray(a);
             int tmp;
 
