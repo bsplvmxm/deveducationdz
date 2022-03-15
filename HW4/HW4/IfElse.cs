@@ -4,15 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public enum Quarters
-{
-    I,
-    II,
-    III,
-    IV,
-    OnAxle
-}
-
 namespace HW4
 {
     public class IfElse
